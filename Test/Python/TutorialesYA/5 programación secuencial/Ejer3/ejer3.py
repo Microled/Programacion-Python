@@ -1,0 +1,5 @@
+num1 = int(input("Introduce el primer número: "))
+num2 = int(input("Introduce el segundo número: "))
+print ("La suma de ambos num es: ",num1+num2)
+print ("El producto de los num es: ",num1*num2)
+input()

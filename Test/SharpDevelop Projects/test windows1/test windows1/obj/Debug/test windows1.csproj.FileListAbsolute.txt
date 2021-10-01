@@ -1,0 +1,6 @@
+C:\Users\Microled\OneDrive - Interface SafeAccess, S.L\Documentos\SharpDevelop Projects\test windows1\test windows1\bin\Debug\test windows1.exe.config
+C:\Users\Microled\OneDrive - Interface SafeAccess, S.L\Documentos\SharpDevelop Projects\test windows1\test windows1\bin\Debug\test windows1.exe
+C:\Users\Microled\OneDrive - Interface SafeAccess, S.L\Documentos\SharpDevelop Projects\test windows1\test windows1\bin\Debug\test windows1.pdb
+C:\Users\Microled\OneDrive - Interface SafeAccess, S.L\Documentos\SharpDevelop Projects\test windows1\test windows1\obj\Debug\test windows1.csprojResolveAssemblyReference.cache
+C:\Users\Microled\OneDrive - Interface SafeAccess, S.L\Documentos\SharpDevelop Projects\test windows1\test windows1\obj\Debug\test windows1.exe
+C:\Users\Microled\OneDrive - Interface SafeAccess, S.L\Documentos\SharpDevelop Projects\test windows1\test windows1\obj\Debug\test windows1.pdb
