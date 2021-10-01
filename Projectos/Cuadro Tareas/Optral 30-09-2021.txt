@@ -1,0 +1,23 @@
+Medición	
+Cambiar disco en Pk Mesa 1 con imágien GS6H482, configurar accesos a red, dominio. Logmein, Ocs, Acronis Backup y OTDR
+Instalar y configurar OneDrive y accesos a carpetas de cables y resultados, configurar en nuevo equipo OTDR y acceso a cableado y configuraciones
+
+Jordi Lozano	
+El pc no le permite acceder a ninguna página web ni firmar digitalmente los documentos pdf. Tiene en su equipo instalado el Avast Antivirus además del antivirus corporativo, una vez desinstalado el Avast el equipo funciona correctamente.
+
+Carlos Maiz	
+Cambiar Pw de O365, Domain y Doptral
+
+Medición	
+Permisos en OneDrive, no hay acceso a las carpetas compartidas con información del cableado
+
+Noemí Llorens	
+Revisar conexiones y estado de pc videoconferencias en ShowRoom
+
+Medición	 
+Comprobar acceso a rutas de Otdr en OneDrive tras cambio de nombres y rutas en O365
+
+Libe Vargas
+Revisar ficheros OneDrive y sincronización ficheros Escritorio
+
+

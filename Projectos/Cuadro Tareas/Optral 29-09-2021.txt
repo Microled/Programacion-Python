@@ -1,0 +1,34 @@
+X Botey
+Revisar cable de conexión despacho de Joan															
+
+Showroom
+Revisar conexiones de Showroom y acceso a internet
+
+PRL
+Comprobar cableado despacho Altimira
+
+Mantenimiento
+Instalar software visor de imágenes
+
+Libe Vargas
+Reinstalar OneDrive
+Resetear OneDrive
+Reconfigurar VPN
+
+Medicion PK Mesa 1
+Comprobar estado Pk Windows 7 y update a Windows 10
+
+Nuria Martin
+Configurar en remoto pdf Architect
+Revisar exportación de pdf desde Axapta
+
+Libe Vargas
+Eliminar elementos duplicados OneDrive en Escritorio
+
+ShowRoom
+Instalar equipos en ShowRoom
+Configurar usuarios TicFormacion
+
+Medicion
+Recuperar Backup PK GS6H482 en disco
+Preparar Sysprep para programa PK + OneDrive

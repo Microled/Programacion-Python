@@ -1,0 +1,11 @@
+Varios
+Solucionar problema con las impresoras desde eQgest en servidor remoto 3
+Eliminar drivers de impresión y seleccionar diálogo 0 (windows) en la Api del programa
+
+Varios	30 min
+Se revisa el estado de impresión en colores, no funciona, tras varias pruebas, finalmente han de abrir incidencia con el proveedor
+
+
+Varios	 30 min
+Se ha instalado el remoto en el servidor1 en Cardedeu y en expediciones1 para poder imprimir desde EqGest
+
