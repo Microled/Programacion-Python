@@ -1,0 +1,22 @@
+  LISTA DE CLINTES, 
+  EL PRIMER CLIENTE ES EL PREDETERMINADO                          
+  PARA LA APLICACIÓN. 
+  NO MODIFICAR POR ENCIMA LA LINEA DE SEPARACIÓN                               
+======================================
+Optral
+Aseger
+AutoAulet
+Calaix de Cultura
+Casinet
+Cotxeras
+Egam
+Euroquimica
+Genco
+Interface
+Ludic
+Lunet
+Mirave
+Secretariat
+Optral
+Zertus
+tested
