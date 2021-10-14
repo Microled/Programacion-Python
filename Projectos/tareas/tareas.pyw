@@ -107,6 +107,7 @@ def funBorrarCampos():
 def funHabilitarCampos():
     comboCliente.configure(state="normal")
     campoUser.configure(state="normal")
+    campoUser.insert(0,"Varios")
     campoTiempoTarea.configure(state="normal")
     txtTarea.configure(state="normal")
     botonMostrarDoc.configure(state="normal")
@@ -223,5 +224,6 @@ campoFecha.insert(0,fechaSistema)
 
 #Combo Clientes
 funActualizarClientes()
+
 
 root.mainloop()
