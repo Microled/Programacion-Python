@@ -10,6 +10,7 @@ import os                         # Módulo para importar el procese para abrir 
 #############################################
 ficheroTarea=None
 nomFichero=None
+nomFicheroExt=None
 
 #############################################
 # Funciones
@@ -35,6 +36,8 @@ def funCrearDoc():
             # Se habilitan los campos y botones para trabajar
             funHabilitarCampos()
             comboCliente.configure(state="disabled")
+            funNombreFichero()
+            labelNombreFichero.configure(text=nomFicheroExt)
 
 ### Función Cargar Documento ###
 ################################
@@ -44,6 +47,8 @@ def funCargarDoc():
     funHabilitarCampos()
     labelRuta.configure(text=ficheroTarea.name)
     comboCliente.configure(state="disabled")
+    funNombreFichero()
+    labelNombreFichero.configure(text=nomFicheroExt) 
  
 ### Función Mostrar Doc ###
 ##########################
@@ -89,6 +94,7 @@ def funCerrarFichero():
     funDeshabilitarCampos()
     comboCliente.configure(state="normal")
     labelRuta.configure(text="SIN FICHERO")
+    labelNombreFichero.configure(text="SIN FICHERO")
 
 ### Función Salir ###
 ####################
@@ -107,6 +113,7 @@ def funBorrarCampos():
 def funHabilitarCampos():
     comboCliente.configure(state="normal")
     campoUser.configure(state="normal")
+    campoUser.delete(0,END)
     campoUser.insert(0,"Varios")
     campoTiempoTarea.configure(state="normal")
     txtTarea.configure(state="normal")
@@ -124,6 +131,13 @@ def funDeshabilitarCampos():
     botonValidarTarea.configure(state="disabled")
     botonCerrarFichero.configure(state="disabled")
     
+### Función Extraer nombre Fichero ###
+######################################
+def funNombreFichero():
+    global ficheroTarea, nomFicheroExt
+    nomFicheroExt=ficheroTarea.name.split("/")[-1]
+    
+
 
 #############################################
 # Creación Interface gráfica
@@ -152,6 +166,9 @@ labelNumeroFecha.place(x=230, y=5)
 campoNumeroFecha=Entry(root, width=5)
 campoNumeroFecha.place(x=260, y=5)
 
+labelNombreFichero=Label(root, text="SIN FICHERO")
+labelNombreFichero.place(x=360,y=5)
+
 botonCreaDoc=Button(root, text="Crear Doc", command=funCrearDoc, width=10, height=2)
 botonCreaDoc.place(x=500, y=5)
 
@@ -167,7 +184,7 @@ botonEditCliente=Button(text="Editar Clientes", command=funEditCliente)
 botonEditCliente.place(x=320, y=35)
 
 # Tercera Fila
-# User y Departamento
+# User y Cargar Doc
 labelUser=Label(root, text="User:")
 labelUser.place(x=5,y=65)
 
@@ -177,11 +194,8 @@ campoUser.place(x=60, y=65)
 botonCargarDoc=Button(root, text="Cargar Doc", command=funCargarDoc, width=10, height=1)
 botonCargarDoc.place(x=500, y=65)
 
-botonMostrarDoc=Button(root, text="Mostrar Doc", command=funMostrarDoc, width=10, state="disabled")
-botonMostrarDoc.place(x=500, y=95)
-
 # Cuarta Fila
-# label tarea, Nº tarea
+# label tarea, Nº tarea, Mostrar Doc
 labelTarea=Label(root,text="Descripción Tarea:")
 labelTarea.place(x=5, y=95)
 
@@ -190,6 +204,9 @@ labelTiempoTarea.place(x=230, y=95)
 
 campoTiempoTarea=Entry(root, width=11,state="disabled")
 campoTiempoTarea.place(x=325, y=95)
+
+botonMostrarDoc=Button(root, text="Mostrar Doc", command=funMostrarDoc, width=10, state="disabled")
+botonMostrarDoc.place(x=500, y=95)
 
 # Quinta Fila
 # Campo Texto
