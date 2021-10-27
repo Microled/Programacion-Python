@@ -38,6 +38,8 @@ def funCrearDoc():
             comboCliente.configure(state="disabled")
             funNombreFichero()
             labelNombreFichero.configure(text=nomFicheroExt)
+            funDeshabilitarDoc()
+
 
 ### Función Cargar Documento ###
 ################################
@@ -48,7 +50,8 @@ def funCargarDoc():
     labelRuta.configure(text=ficheroTarea.name)
     comboCliente.configure(state="disabled")
     funNombreFichero()
-    labelNombreFichero.configure(text=nomFicheroExt) 
+    labelNombreFichero.configure(text=nomFicheroExt)
+    funDeshabilitarDoc()
  
 ### Función Mostrar Doc ###
 ##########################
@@ -95,6 +98,9 @@ def funCerrarFichero():
     comboCliente.configure(state="normal")
     labelRuta.configure(text="SIN FICHERO")
     labelNombreFichero.configure(text="SIN FICHERO")
+    botonCreaDoc.configure(state="normal")
+    botonCargarDoc.configure(state="normal")
+
 
 ### Función Salir ###
 ####################
@@ -105,6 +111,7 @@ def funSalir():
 #############################
 def funBorrarCampos():
     campoUser.delete(0,END)
+    campoUser.insert(0,"Varios")
     txtTarea.delete("0.0",END)
     campoTiempoTarea.delete(0,END)
 
@@ -130,12 +137,22 @@ def funDeshabilitarCampos():
     botonMostrarDoc.configure(state="disabled")
     botonValidarTarea.configure(state="disabled")
     botonCerrarFichero.configure(state="disabled")
+
+### Funcion Deshabilitar Crear y cargar Documentos #
+####################################################
+
+def funDeshabilitarDoc():
+    botonCargarDoc.configure(state="disabled")
+    botonCreaDoc.configure(state="disabled")
+
     
 ### Función Extraer nombre Fichero ###
 ######################################
+
 def funNombreFichero():
     global ficheroTarea, nomFicheroExt
-    nomFicheroExt=ficheroTarea.name.split("/")[-1]
+    nomFicheroExt=ficheroTarea.name.split("/")[-1]  # Extraemos nombre fichero de la ruta completa del fichero
+                                                    # Pasamos la ruta a una lista separada por "/" y cojemos el último elemento
     
 
 
@@ -239,6 +256,10 @@ labelRuta.place(x=5, y=425)
 fechaSistema=datetime.today().strftime("%d-%m-%Y")
 campoFecha.insert(0,fechaSistema)
 
+
+############################################
+# Actualizar lista clientes                #
+############################################
 #Combo Clientes
 funActualizarClientes()
 
