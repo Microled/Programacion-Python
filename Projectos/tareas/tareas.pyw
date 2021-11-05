@@ -3,6 +3,7 @@ from tkinter import ttk           # Módulo para el combobox
 from tkinter import scrolledtext  # Módulo para el scrolledtext (tareas)
 from datetime import datetime     # Módulo para importar fecha del sistema
 from tkinter import filedialog    # Módulo para importar dialogo guardar y abrir archivo
+from tkcalendar import Calendar   # Módulo Calendar de tkalendar
 import os                         # Módulo para importar el procese para abrir fichero en windows directamente
    
 #############################################
@@ -11,6 +12,7 @@ import os                         # Módulo para importar el procese para abrir 
 ficheroTarea=None
 nomFichero=None
 nomFicheroExt=None
+calendario=None
 
 #############################################
 # Funciones
@@ -155,6 +157,26 @@ def funNombreFichero():
                                                     # Pasamos la ruta a una lista separada por "/" y cojemos el último elemento
     
 
+# Función Seleccionar fecha                #
+# con una Ventana Adicional                #
+############################################
+
+def funSeleccionarFecha():
+    
+    ventanaFecha=Toplevel()
+    ventanaFecha.title("Seleccionar Fecha")
+    ventanaFecha.geometry("260x230")
+    ventanaFecha.resizable(width=False, height=False)
+    cal=Calendar(ventanaFecha,date_pattern="dd/mm/yyyy")
+    cal.place(x=5, y=5)
+    botonAceptar=Button(ventanaFecha, text="Aceptar",command=lambda:funCambiarFecha(cal))
+    botonAceptar.place(x=100,y=195)
+    
+
+def funCambiarFecha(cal):
+   
+    campoFecha.delete(0,END)
+    campoFecha.insert(0,cal.get_date())
 
 #############################################
 # Creación Interface gráfica
@@ -176,6 +198,9 @@ labelFecha.place(x=5, y=5)
 
 campoFecha=Entry(root, justify=CENTER)
 campoFecha.place(x=60, y=5)
+
+botonSelecionarFecha=Button(root,text="F", command=funSeleccionarFecha)
+botonSelecionarFecha.place(x=190, y=5)
 
 labelNumeroFecha=Label(root, text="Nº:")
 labelNumeroFecha.place(x=230, y=5)
@@ -262,6 +287,5 @@ campoFecha.insert(0,fechaSistema)
 ############################################
 #Combo Clientes
 funActualizarClientes()
-
 
 root.mainloop()
