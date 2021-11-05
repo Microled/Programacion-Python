@@ -4,6 +4,7 @@
   NO MODIFICAR POR ENCIMA LA LINEA DE SEPARACIÓN                               
 ======================================
 Optral
+Acaudit
 Aseger
 AutoAulet
 Bressers Law
@@ -14,10 +15,12 @@ Egam
 Euroquimica
 Genco
 Interface
+Inyectra
 Ludic
 Lunet
 Mirave
 Secretariat
+Semai
 Optral
 Zertus
 tested
