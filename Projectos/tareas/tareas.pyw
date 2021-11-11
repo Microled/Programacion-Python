@@ -170,13 +170,17 @@ def funSeleccionarFecha():
     cal=Calendar(ventanaFecha,date_pattern="dd/mm/yyyy")
     cal.place(x=5, y=5)
     botonAceptar=Button(ventanaFecha, text="Aceptar",command=lambda:funCambiarFecha(cal))
-    botonAceptar.place(x=100,y=195)
+    botonAceptar.place(x=30,y=195)
+    botonCerrar=Button(ventanaFecha, text="Cerrar",command=lambda:ventanaFecha.destroy())
+    botonCerrar.place(x=160,y=195)
+
     
 
 def funCambiarFecha(cal):
    
     campoFecha.delete(0,END)
     campoFecha.insert(0,cal.get_date())
+    return(ventanaFecha.destroy())
 
 #############################################
 # Creación Interface gráfica
